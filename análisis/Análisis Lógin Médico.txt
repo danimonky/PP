@@ -1,0 +1,80 @@
+Análisis de Login Médico
+El login se va a componer de 2 ventanas (Login y Recuperación de contraseña)
+En la primera ventana, tendremos dos casillas de texto limitadas a carácteres alfanuméricos, un botón de cancelar que cierre la ventana de login y otro botón de aceptar(Con más detalle más adelante).
+	La cuenta y contraseña serán dados por el sistema codificados en sistéma numérico base 50.
+	(10)(20)(30)(40)(50)
+	 0   A   a   K   k	Básicamente es un sistéma numerico de 50 dígitos, donde se le proporcionará una cuenta realizando la conversion.
+	 1   B   b   L   l	Cuenta= (n)+0+(día de registro)+0+(Año de registro)+0+(Mes de registro)
+	 2   C   c   M   m		n= número de registro realizado en ese día (una variable que comienza en 1 y que aumentará en 1 por cada registro realizado, cuando termina el día, la variable se resetea a 1).
+	 3   D   d   N   n	La contraseña se generará a partir de la Cuenta, una vez teniendo su valór en base 50, los carácteres serán traducidos a valor entero con respecto al código ascii.
+	 4   E   e   Ñ   ñ	Cuando se tenga este nuevo valor entero, se anexarán 4 carácteres numéricos extra en la parte derecha de la cifra
+	 5   F   f   O   o		Ejémplo: NúmeroEnteroXXXX
+	 6   G   g   P   p			 X=Valór random [0-9]
+	 7   H   h   Q   q
+	 8   I   i   R   r
+	 9   J   j   S   s
+
+	En la base de datos de Login se guardarán los números enteros de Usuario y Contraseña que fueron convertidos a base 50.
+	Esto se hace con la finalidad de tener los datos protejidos de la siguiente manera:
+	El botón de aceptar hará que las 2 cadenas (Usuario y Contraseña) sean descoridifacas a base decimal y proceda a buscar los respectivos datos en la Base de Datos de Login.
+		NOTA: Las cadenas generadas en la conversión decimal a base 50 no serán almacenados en la Base de Datos.
+La segunda ventana tendrá una casilla de texto para introducir el correo electrónico afiliada a la cuenta del Médico donde se enviará ya sea un link de recuperación o un código (está por verse).
+
+Equipo M&M:
+	Rojas Fuentes Hugo Daniel
+	Velázquez Romero Alan Alexis
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Moy se la eat
